@@ -1,0 +1,34 @@
+{% extends 'web/base.html'%}
+{% block body%}
+<ul class="nav navbar-nav ">
+    <li class="">
+        <a href="/trans/create">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>&nbsp;New Transaction
+        </a>
+    </li>
+    <br>
+    <li class="">
+        <a href="/trans/search">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Search transaction by name
+        </a>
+    </li>
+    <br>
+    <li class="">
+        <a href="/trans/searchd">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Search transaction by date
+        </a>
+    </li>
+    <br>
+    <li class="">
+        <a href="/trans/searchdatename">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Search transaction by date & name
+        </a>
+    </li>
+    <br>
+    <li class="">
+        <a href="/trans/autoupdate">
+            <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;update data
+        </a>
+    </li>
+</ul>
+{% endblock %}

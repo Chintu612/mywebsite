@@ -1,0 +1,21 @@
+{% extends 'web/base.html'%}
+{% block body%}
+<ul>
+    <li class=" ">
+        <a href='create/'>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add new Product
+        </a>
+    </li>
+    </ul>
+<ul> 
+    <!-- Iterate over object_list -->
+    {% for object in object_list %} 
+    <!-- Display Objects -->
+    <a href='detail/{{object.id}}/'>{{ object.name }}</a> 
+    <hr/> 
+    <!-- If objet_list is empty  -->
+    {% empty %} 
+    <li>No objects yet.</li> 
+    {% endfor %} 
+</ul> 
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'web/base.html'%}
+{% block body%}
+<form action="/trans/searchdatename/search/" method="get">
+    <label for="resultname">Enter a name you wanted to search : </label>
+    <input id="resultname" type="text" name="resultname" value="{{search_result}}">
+    <br>
+    <label for="resultdate">Enter a date you wanted to search : </label>
+    <input id="resultdate" type="date" name="resultdate" value="{{search_result}}">
+    <input type="submit" value="submit">
+</form> 
+{% endblock %}

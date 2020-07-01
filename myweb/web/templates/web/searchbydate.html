@@ -1,0 +1,10 @@
+{% extends 'web/base.html'%}
+{% block body%}
+{% for object in buy%}
+<p>Name of Customer :{{object.customer.name}}</p>
+<p>Name of Product bought :{{object.product.name}}</p>
+<p>Date on which item is bought : {{object.date}}</p>
+<p>Quantity of product bought : {{object.quantity}}</p>
+<p>Amount to be paid :Rs {% widthratio object.amountpayable 1 object.product.price %}</p><br>
+{% endfor %}
+{% endblock %}

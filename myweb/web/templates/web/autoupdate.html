@@ -1,0 +1,14 @@
+{% extends 'web/base.html'%}
+{% block body%}
+{% for object in buy%}
+{% object.customer.amounttobepaid=100 %}
+<p>{{object.customer.name}}</p>
+<p>{{object.customer.amounttobepaid}}</p>
+<p>{{object.product.name}}</p>
+<p>{{object.product.price}}</p>
+<p>{{object.quantity}}</p>
+<p>{{object.date}}</p>
+<p>{{object.product.stockavailable}}</p>
+<br>
+{% endfor %}
+{% endblock %}
