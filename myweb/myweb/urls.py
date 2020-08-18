@@ -3,7 +3,6 @@ from django.urls import path
 from web.views import createCustomer,createProduct,CustomerList,ProductList,index_view,ProductDetailView,CustomerDetailView
 from web.views import UpdateCustomer,edit_view,UpdateProduct,editcus_view,editpro_view,clist,plist,DeleteCustomer,DeleteProduct,logout
 from web.views import trans_view,Createtrans,search,searchbyname,searchdate,searchbydate,searchbydatename,searchdatenameform,login
-from web.views import autoupdate
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index_view),
@@ -34,5 +33,5 @@ urlpatterns = [
     path('trans/searchdatename/search/',searchbydatename),
     path('login/',login ,name='login'),
     path('logout/',logout ,name='logout'),
-    path('trans/autoupdate',autoupdate),
+    
 ]

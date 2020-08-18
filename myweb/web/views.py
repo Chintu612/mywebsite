@@ -6,9 +6,6 @@ from django.shortcuts import render,redirect
 from django.shortcuts import HttpResponse 
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
-def autoupdate(request):
-    buy=Buy.objects.filter(update=False)
-    return render( request, 'web/autoupdate.html', {'buy':buy})  
 def login(request):
     if request.method == "POST" :
         username = request.POST['username']
@@ -103,7 +100,7 @@ class DeleteProduct(DeleteView):
 
 class Createtrans(CreateView):
     model=Buy
-    fields=['customer','product','quantity','update']
+    fields=['customer','product','quantity']
     success_url = '/trans/'
 def logout(request):
     auth.logout(request)

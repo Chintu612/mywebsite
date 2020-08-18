@@ -1,6 +1,5 @@
 from django.db import models
 from datetime import datetime,date
-
 class Customer(models.Model):
     name=models.CharField(max_length=50)
     mobile=models.CharField(max_length=50)
@@ -21,10 +20,11 @@ class Buy(models.Model):
     date=models.DateField(auto_now_add=True)
     quantity=models.IntegerField()
     time=models.TimeField(auto_now_add=True)
-    update=models.BooleanField(default=True)
     def __str__ (self):
         return self.customer.name+'--'+(str)(self.date)
-        
+  
+     
+            
         
 
 
